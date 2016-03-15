@@ -81,7 +81,7 @@ public abstract class IncParser {
         outPargFile = props.getProperty("outParg");        
         modelFile = props.getProperty("model");
         
-        incalgo = PropertiesUtils.getBool(props, "RevInc", true);
+        incalgo = props.getProperty("algo").equals("RevInc");
         isTrain = PropertiesUtils.getBool(props, "isTrain", false);
         beamSize = PropertiesUtils.getInt(props, "beam", 1);
         iters = PropertiesUtils.getInt(props, "iters", 10);
